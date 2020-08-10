@@ -8,13 +8,6 @@ class Import
     # row は CSV::Row クラスである。これはモデルの引数として渡せないのでハッシュに変換しておく。
     list = []
     CSV.foreach(path, headers: true) { |row| list << row.to_h }
-    list << {}
+    list
   end
-  puts "インポート開始"
-  hoge.create!(list)
-  puts "インポートに成功しました"
-rescue ActiveModel::UnknownAttributeError => invalid
-
-  puts "インポートに失敗しました:#{invalid}"
-
 end
