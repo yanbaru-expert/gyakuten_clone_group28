@@ -5,7 +5,7 @@ namespace :import_csv do
   desc "AwsTextデータのインポート"
 
   task AwsText: :environment do
-    list = Import.csv_data(path: 'db/csv_data/sample.csv')
+    list = Import.csv_data(path: 'db/csv_data/aws_text_data.csv')
     puts "インポート処理を開始"
     AwsText.transaction do
       # 例外が発生する可能性のある処理
