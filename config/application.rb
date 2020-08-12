@@ -22,6 +22,7 @@ Bundler.require(*Rails.groups)
 module GyakutenCloneGroup
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+    config.load_defaults 6.0
     # 表示TimeZone
     config.time_zone = 'Tokyo'
 
