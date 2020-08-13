@@ -3,10 +3,26 @@
  *= require_self
  */
 
- @import "bootstrap/scss/bootstrap";
- 
+@import "bootstrap/scss/bootstrap";
+
 .base-container {
   max-width: 992px;
   margin: 0 auto;
   padding: 1rem;
 }
+
+.base-color {
+  background-color: #5D98FF;
+}
+
+@media screen and (min-width: 992px){
+.navbar {
+  font-size: 0.6rem;
+  margin: 0 auto;
+  width: var(--breakpoint-lg);
+  }
+}
+
+
+
+
