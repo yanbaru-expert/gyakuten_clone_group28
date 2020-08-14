@@ -19,6 +19,10 @@ gem 'pry-doc'
 # ログイン用gem追加
 gem 'devise'
 
+#日本語化
+gem 'rails-i18n', '~> 6.0.0'
+gem 'devise-i18n'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
