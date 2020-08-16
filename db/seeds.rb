@@ -10,7 +10,7 @@ User.find_or_create_by!(email: EMAIL) do |user|
 end
 
 # 管理者作成
-AdminUser.find_or_create_by!(email: EMAIL) do |user|
-  user.password = PASSWORD
+AdminUser.find_or_create_by!(email: ADMIN_EMAIL) do |user|
+  user.password = ADMIN_PASSWORD
   puts '管理者認識しました。'
 end
