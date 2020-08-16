@@ -15,4 +15,19 @@ namespace :import_csv do
     puts "インポート完了!!"
   end
 
+  desc "Movieデータのインポート"
+
+  task Moviedate: :environment do
+    list = Import.csv_data(path: 'db/csv_date/movie_date.csv')
+    puts "インポート処理を開始"
+    Moviedate.transaction do
+      # 例外が発生する可能性のある処理
+      Moviedate.create!(list)
+    end
+    # 正常に動作した場合の処理
+    puts "インポート完了!!"
+  end
 end
+
+
+  
