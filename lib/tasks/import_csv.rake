@@ -17,12 +17,12 @@ namespace :import_csv do
 
   desc "Movieデータのインポート"
 
-  task Moviedate: :environment do
-    list = Import.csv_data(path: 'db/csv_date/movie_date.csv')
+  task Moviedata: :environment do
+    list = Import.csv_data(path: 'db/csv_data/movie_data.csv')
     puts "インポート処理を開始"
-    Moviedate.transaction do
+    Moviedata.transaction do
       # 例外が発生する可能性のある処理
-      Moviedate.create!(list)
+      Moviedata.create!(list)
     end
     # 正常に動作した場合の処理
     puts "インポート完了!!"
