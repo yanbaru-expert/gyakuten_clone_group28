@@ -5,3 +5,15 @@
   margin: 0 auto;
   padding: 1rem;
 }
+
+.base-color {
+  background-color: #5d98ff;
+}
+
+@media screen and (min-width: 992px) {
+  .navbar {
+    font-size: 0.8rem;
+    margin: 0 auto;
+    width: var(--breakpoint-lg);
+  }
+}
