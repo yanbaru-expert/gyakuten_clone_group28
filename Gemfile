@@ -23,6 +23,9 @@ gem 'devise'
 gem 'rails-i18n', '~> 6.0.0'
 gem 'devise-i18n'
 
+
+#管理者画面
+gem 'activeadmin'
 #スタイル修正用のgemを追加
 gem 'devise-bootstrap-views'
 

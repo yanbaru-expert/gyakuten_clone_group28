@@ -1,8 +1,3 @@
-/*
- *= require_tree .
- *= require_self
- */
-
 @import "bootstrap/scss/bootstrap";
 
 .base-container {
@@ -12,17 +7,13 @@
 }
 
 .base-color {
-  background-color: #5D98FF;
+  background-color: #5d98ff;
 }
 
-@media screen and (min-width: 992px){
-.navbar {
-  font-size: 0.8rem;
-  margin: 0 auto;
-  width: var(--breakpoint-lg);
+@media screen and (min-width: 992px) {
+  .navbar {
+    font-size: 0.8rem;
+    margin: 0 auto;
+    width: var(--breakpoint-lg);
   }
 }
-
-
-
-
