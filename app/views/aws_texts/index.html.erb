@@ -14,94 +14,16 @@
       </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>
-            1
-          </td>
-          <td>
-            <a target="_blank" href="/aws/1"> 【 第1章 】ネットワーク環境設定</a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            2
-          </td>
-          <td>
-            <a target="_blank" href="/aws/2">【 第2章 】RDSの設定</a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            3
-          </td>
-          <td>
-            <a target="_blank" href="/aws/3">【 第3章 】EC2の設定</a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            4
-          </td>
-          <td>
-            <a target="_blank" href="/aws/4">【 第4章 】サーバー環境の構築  </a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            5
-          </td>
-          <td>
-            <a target="_blank" href="/aws/5">【 第5章 】Railsアプリを配置する  </a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            6
-          </td>
-          <td>
-            <a target="_blank" href="/aws/6">【 第6章 】ロードバランサーを設定する  </a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            7
-          </td>
-          <td>
-            <a target="_blank" href="/aws/7">【 第7章 】Railsアプリの起動  </a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            8
-          </td>
-          <td>
-            <a target="_blank" href="/aws/8">【 第8章 】ドメインの取得     </a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            9
-          </td>
-          <td>
-            <a target="_blank" href="/aws/9">【 第9章 】IPアドレスとドメインの関連付け設定  </a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            10
-          </td>
-          <td>
-            <a target="_blank" href="/aws/10">【 第10章 】ACMでSSL証明書の取得  </a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            11
-          </td>
-          <td>
-            <a target="_blank" href="/aws/11">【 第11章 】https化に向けた設定  </a>
-          </td>
-        </tr>
+        <% @aws_texts.each.with_index(1) do |aws_text, i| %>
+          <tr>
+            <td>
+            <%= "#{i}" %>
+            </td>
+            <td>
+              <%= aws_text.title %>
+            </td>
+          </tr>
+        <% end %>
       </tbody>
     </table>
   </div>
