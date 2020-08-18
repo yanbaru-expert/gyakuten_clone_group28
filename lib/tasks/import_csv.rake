@@ -1,7 +1,7 @@
 require "import"
 
 namespace :import_csv do
-  # 起動コマンド記載欄
+  # rake import_csv:AwsText
   desc "AwsTextデータのインポート"
 
   task AwsText: :environment do
@@ -15,6 +15,7 @@ namespace :import_csv do
     puts "インポート完了!!"
   end
 
+  # rake import_csv:Movie 
   desc "Movieデータのインポート"
 
   task Movie: :environment do
@@ -30,4 +31,3 @@ namespace :import_csv do
 end
 
 
-  

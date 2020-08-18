@@ -1,11 +1,6 @@
 @import "bootstrap/scss/bootstrap";
 
-.base-container {
-  max-width: 992px;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
+// navbar
 .base-color {
   background-color: #5d98ff;
 }
@@ -17,3 +12,73 @@
     width: var(--breakpoint-lg);
   }
 }
+
+// main
+body {
+  padding-top: 56px;
+}
+
+.base-container {
+  @extend .container-fluid;
+  max-width: var(--breakpoint-lg);
+  padding: 30px 15px;
+}
+
+
+
+.aws-table-head {
+  background-color: #5D99FF;
+}
+
+th, td {
+  vertical-align: middle !important;
+}
+
+
+@media screen and (min-width: 992px) {
+  .base-container  {
+    width: 992px;
+    padding: 120px 0 80px 0;
+    margin: 0 auto;
+  }
+
+  .base-container h2 {
+    padding: 20px 0px 10px 0px;
+    font-size: 30px;
+  }
+
+  #contents p {
+    width: 710px;
+    margin: 0 auto;
+    padding-bottom: 15px;
+    font-size: 17px;
+  }
+
+  .table-container {
+    width: 710px;
+    margin: 0 auto;
+  }
+  .base-container table {
+    table-layout: fixed;
+    font-size: 17px;
+  }
+
+  .base-container table .w-1 {
+    width: 10%;
+  }
+  .base-container table .w-5 {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 0px) {
+  .base-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px 0 160px 0;
+  }
+}
+
+
+
+
