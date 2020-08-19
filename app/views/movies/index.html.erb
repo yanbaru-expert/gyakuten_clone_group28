@@ -1,0 +1,65 @@
+<section id = "con">
+
+    <div id="container" class="">
+
+        <div class="container-fluid">
+            <div class="row">
+                <% @movies.each.with_index(1) do |movie, i| %>
+                <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card border-dark mb-3">
+                            <div class="card-header p-0">
+
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe width="560" height="315" src= "<%= movie.url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                </div>
+                            </div>
+                                <div class="card-body text-dark movie-body">
+                                    <p id="watched-movie-1133">
+                                        <a class="btn btn-secondary btn-block" data-remote="true" rel="nofollow" data-method="post" href="/movies/1133/watched_movies">視聴済みにする</a>
+                                    </p>
+                                <p>
+                                    <tr>
+                                    <th class="w-1">Lv:</th>
+                                        <td>
+                                            <%= i %>
+                                        </td>
+                                        <td>
+                                            <%= movie.title %>
+                                        </td>
+                                    </tr>
+                                </p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+
+
+        <nav>
+            <div class="text-center">
+            <ul class="pagination">
+                <li class="page-item active">
+                    <a data-remote="false" class="page-link">1</a>
+                </li>
+
+                <li class="page-item">
+                    <a rel="next" class="page-link" href="/movie?page=2">2</a>
+                </li>
+
+                <li class="page-item">
+                    <a rel="next" class="page-link" href="/movie/page-2"><span class="translation_missing" title="translation missing: ja.views.pagination.next">Next</span></a>
+                </li>
+
+                <li class="page-item">
+                    <a class="page-link" href="/movie?page=2"><span class="translation_missing" title="translation missing: ja.views.pagination.last">Last</span></a>
+                </li>
+            </ul>
+            </div>
+        </nav>
+        </div>
+    </div>
+</section>
+
