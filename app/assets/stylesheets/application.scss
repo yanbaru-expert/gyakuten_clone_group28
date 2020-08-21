@@ -24,19 +24,17 @@ body {
   padding: 30px 15px;
 }
 
-
-
 .aws-table-head {
-  background-color: #5D99FF;
+  background-color: #5d99ff;
 }
 
-th, td {
+th,
+td {
   vertical-align: middle !important;
 }
 
-
 @media screen and (min-width: 992px) {
-  .base-container  {
+  .base-container {
     width: 992px;
     padding: 120px 0 80px 0;
     margin: 0 auto;
@@ -78,10 +76,15 @@ th, td {
     padding: 50px 0 160px 0;
   }
 }
-
 //pagination movies/idex.html.erb
 .pagination {
   justify-content: center;
 }
 
 
+
+footer {
+  font-size: 20px;
+  padding: 15px 0 15px 0;
+  text-align: center;
+}
