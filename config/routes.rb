@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   root "movies#index"
   resources :movies
   resources :aws_texts, only: :index
-
+  get "aws_texts/:id" => "aws_texts#show"
 end
