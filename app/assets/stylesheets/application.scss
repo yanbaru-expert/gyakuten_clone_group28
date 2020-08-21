@@ -13,7 +13,7 @@
   }
 }
 
-// main
+// main aws_texts index.html.erb
 body {
   padding-top: 56px;
 }
@@ -76,6 +76,12 @@ td {
     padding: 50px 0 160px 0;
   }
 }
+//pagination movies/idex.html.erb
+.pagination {
+  justify-content: center;
+}
+
+
 
 footer {
   font-size: 20px;
