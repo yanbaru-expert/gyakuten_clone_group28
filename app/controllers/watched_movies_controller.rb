@@ -1,4 +1,4 @@
-class WatchedMovieController < ApplicationController
+class WatchedMoviesController < ApplicationController
     def create
         current_user.watched_movies.create!(movie_id: params[:movie_id])
         redirect_to root_path

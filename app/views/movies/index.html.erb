@@ -15,7 +15,6 @@
                                 <a class="btn btn-secondary btn-block" data-remote="true" rel="nofollow" data-method="post" href="/movies/<%= movie.id %>/watched_movies">視聴済みにする</a>
                             </p>
                             <p>
-                                <!-- ***** 以下を追加 ***** -->
                                 <% if learned_movies.exists?(user_id: current_user.id) %>
                                 <!-- 視聴済み -->
                                 <!-- ***** 以下を修正 ***** -->
