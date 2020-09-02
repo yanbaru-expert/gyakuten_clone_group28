@@ -15,15 +15,15 @@
                                 <a class="btn btn-secondary btn-block" data-remote="true" rel="nofollow" data-method="post" href="/movies/<%= movie.id %>/watched_movies">視聴済みにする</a>
                             </p>
                             <p>
-                                <% if learned_movies.exists?(user_id: current_user.id) %>
+                                <% if if @learned_movie_ids.include?(movie.id) %>
                                 <!-- 視聴済み -->
                                 <!-- ***** 以下を修正 ***** -->
-                                <%= link_to '視聴済みを解除', movie_watched_movies_path(message), method: :delete %>
+                                <%= link_to '視聴済みを解除', movie_watched_movies_path(movie), method: :delete %>
                                 <!-- ***** 以上を修正 ***** -->
                                 <% else %>
                                 <!-- いいね!していない -->
                                 <!-- ***** 以下を修正 ***** -->
-                                <%= link_to '視聴済みにする', movie_watched_movies_path(message), method: :post %>
+                                <%= link_to '視聴済みにする', movie_watched_movies_path(movie), method: :post %>
                                 <!-- ***** 以上を修正 ***** -->
                                 <% end %>
                             </p>
