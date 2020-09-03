@@ -6,6 +6,6 @@
     resource :watched_movies, only: [:create, :destroy]
   end
   root "movies#index"
-  resources :movies
+  resources :movies, only: [:index]
   resources :aws_texts, only: [:index, :show]
 end
