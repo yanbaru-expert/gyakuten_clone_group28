@@ -1,29 +1,34 @@
-<section id = "content">
-  <div id="container" class="">
-    <div class="container-fluid">
-      <div class="row">
-        <% @movies.each.with_index(@movies.offset_value + 1) do |movie, i| %>
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="card border-dark mb-3">
-              <div class="card-header p-0">
-                <div class="embed-responsive embed-responsive-16by9">
-                  <iframe width="560" height="315" src= "<%= movie.url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-                </div>
-              </div>
-              <div class="card-body text-dark movie-body">
-                <p id="watched-movie-1133">
-                  <a class="btn btn-secondary btn-block" data-remote="true" rel="nofollow" data-method="post" href="/movies/1133/watched_movies">視聴済みにする</a>
-                </p>
-                <p>Lv.<%= i %> : <%= movie.title %></p>
-              </div>
-            </div>
-          </div>
-        <% end %>
-      </div>
-      <div class="paginate">
-        <%= paginate @movies %>
-      </div>
-    </div>
-  </div>
-</section>
+<section id="content">
+    <div id="container" class="">
+        <div class="container-fluid">
+            <div class="row">
+                <% @movies.each.with_index(@movies.offset_value + 1) do |movie, i| %>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card border-dark mb-3">
+                        <div class="card-header p-0">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe width="560" height="315" src="<%= movie.url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                            </div>
+                        </div>
+                        <div class="card-body text-dark movie-body">
+                            <p id="watched-movie-<%= movie.id %>"></p>
+                            <% if @learned_movie_ids.include?(movie.id) %>
+                            <!-- 視聴済み -->
+                            <%= link_to '視聴済みを解除', movie_watched_movies_path(movie), method: :delete, remote: true, class: "btn btn-primary btn-block" %>
+                            <% else %>
+                            <!-- 試聴済みにしていない -->
+                            <%= link_to '視聴済みにする', movie_watched_movies_path(movie), method: :post, remote: true, class: "btn btn-secondary btn-block" %>
+                            <% end %>
 
+                            <p>Lv.<%= i %> : <%= movie.title %></p>
+                        </div>
+                    </div>
+                </div>
+                <% end %>
+            </div>
+            <div class="paginate">
+                <%= paginate @movies %>
+            </div>
+        </div>
+    </div>
+</section>
